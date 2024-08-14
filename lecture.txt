@@ -1,0 +1,66 @@
+CORS : cross origin resource sharing.
+
+backend is running on localhost and port : 4000
+// https:notes.app.com
+
+react app frontend: localhost:3000
+
+--> any frontend be able to request: --> client side request
+// https:notes.app.netlify.com
+
+
+cross origin --> different origin
+--> frontend 
+--> backend 
+
+--> Cors : allows you to define which client or frontend should be able to request you 
+
+cors({origin: 'https:notes.app.netlify.com'}) // only localhost:3000 can request 3001
+cors({origin: '*'}) // any frontend can request you
+
+
+--> register and login system
+--> user schema and model
+--> while registering will be  hashing the password with bcrypt
+--> while logging we will be comparing the password using bcrypt and creating a token with the help
+    of jwt
+
+
+
+
+noteModel:
+title
+description
+status
+userIDn==> id of UserModel (mongodb id of user)
+
+--> 3 kinds of relationships:
+1-1 , 1-many, many-many
+
+
+a user can create multiple notes:
+user - 1
+notes - many (userID)
+
+1- many relationship
+
+=> model is done?
+=> route for it --> to access these routes the user should be authenticated
+==> to check the authentication ==> auth middleware
+
+
+
+==> Url of the backend:
+localhost: 3005
+
+==> frontend:
+--> url of backend to fetch notes: localhost:3005/notes  with the deployed backend url
+--> deploy frontend 
+will my frontend be able to fetch the notes from the backend? (localhost)
+
+--> can we directly deploy and use that in the frontend?
+--> deploy the backend :
+=> platforms:
+-> railway --> (evaluation) --> fast --> you can only deploy one backend --> reserve
+-> cyclic
+-> render --> (use this)
